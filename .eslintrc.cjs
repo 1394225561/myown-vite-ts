@@ -55,6 +55,13 @@ module.exports = {
         ],
       },
     ],
+    // Eslint禁止使用++与–-，因为一元运算符会自动插入分号，如果一元运算符前有空格，可能会引发歧义
+    'no-plusplus': [
+      'off',
+      {
+        allowForLoopAfterthoughts: true,
+      },
+    ],
     // 因为vite需要自己构建配置而vue-cli自动构建"@"，所以eslint不识别webpack的路径别名 所以加入以下关闭规则的配置
     'import/no-unresolved': 'off',
     // 'import/extensions': 'off',
